@@ -8,7 +8,7 @@ def linux_only(require_as)
   RUBY_PLATFORM.include?('linux') && require_as
 end
 
-gem "rails", "3.2.11"
+gem "rails", "3.2.12"
 
 # Supported DBs
 gem "mysql2", group: :mysql
@@ -96,6 +96,11 @@ gem 'settingslogic'
 # Misc
 gem "foreman"
 gem "git"
+
+# Security Fixes
+gem "rack", "~> 1.4.5"
+gem "json", "~> 1.7.7"
+gem "multi_json", "~> 1.6.1"
 
 group :assets do
   gem "sass-rails",   "~> 3.2.5"
